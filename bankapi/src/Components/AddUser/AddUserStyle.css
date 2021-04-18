@@ -1,0 +1,19 @@
+.addUserContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 230px;
+}
+
+input{
+    margin-bottom: 20px;
+    height: 40px;
+}

@@ -1,0 +1,19 @@
+table{
+    border: solid black;
+}
+
+table,
+td {
+    border: none;
+}
+
+thead th{
+    height: 50px;
+    text-align: center;
+}
+
+thead,
+tfoot {
+    background-color: #ffffff;
+    color: #1a759f;
+}
