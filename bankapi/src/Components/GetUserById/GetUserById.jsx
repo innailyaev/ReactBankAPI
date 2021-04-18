@@ -1,5 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
+import './GetByIdStyle.css';
+import UpdateCredit from "../UpdateCredit/UpdateCredit";
 
 const GetAllUsers =()=>{
 
@@ -27,9 +29,21 @@ const GetAllUsers =()=>{
   }
 
   return (
-    <div>
+    <div className="getByIdContainer">
+      <h2>Get User By ID</h2>
       <input type="text" onChange={(e)=>setIdData(e.target.value)}/>
-      <input type="button" value="Search" onClick={clickHandler}/>
+      <button className="btn" onClick={clickHandler}>Search</button>
+      <div>
+      { (userData) ? <div className="UserDetailes">
+                        <p>User Detailes</p>
+                        <p><span>Cash:</span> {userData.cash}</p>
+                        <p><span>Credit:</span> {userData.credit}</p>
+                        <UpdateCredit userId={userData.id}/>
+                      </div>
+                      
+      :null}
+
+      </div>
     </div>
   );
 }

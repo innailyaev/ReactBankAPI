@@ -1,0 +1,17 @@
+.creditContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.creditContainer button{
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
+}
+
+.creditContainer input{
+    width: 100px;
+    margin-right: 10px;
+}

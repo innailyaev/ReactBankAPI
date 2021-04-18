@@ -24,8 +24,9 @@ const GetAllUsers =()=>{
   },[])
 
   return (
-    <div>
-        <h1></h1>
+    <div className="mainDiv">
+      <div className="rightSide">
+        <h2>USERS</h2>
         <table>
             <thead style={{fontSize:'20px'}}>
                 <tr>
@@ -46,8 +47,10 @@ const GetAllUsers =()=>{
           }
         </tbody>
       </table>
-
-      <GetUserById/>
+      </div>
+        <div className="leftSide">
+          <GetUserById/>
+      </div>
     </div>
   );
 }

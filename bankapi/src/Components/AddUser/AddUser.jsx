@@ -40,15 +40,17 @@ const AddUser =()=>{
   return (
     <div className="addUserContainer">
         <h1>Add New User</h1>
-        <form onSubmit={formHandler} className="formContainer">
-            <label>ID:</label>
-            <input type="text" onChange={(e)=>setId(e.target.value)}/>
-            <label>CASH:</label>
-            <input type="text" onChange={(e)=>setCash(e.target.value)}/>
-            <label>CREDIT:</label>
-            <input type="text" onChange={(e)=>setCredit(e.target.value)}/>
-            <input type="submit" onClick={clickHandler}/>
-        </form>
+        <div className="formDiv">
+            <form onSubmit={formHandler} className="formContainer">
+                <label>ID</label>
+                <input type="text" onChange={(e)=>setId(e.target.value)}/>
+                <label>CASH</label>
+                <input type="text" onChange={(e)=>setCash(e.target.value)}/>
+                <label>CREDIT</label>
+                <input type="text" onChange={(e)=>setCredit(e.target.value)}/>
+                <button onClick={clickHandler} className="btn">Submit</button>
+            </form>
+        </div>
         { error === '' ? <p>User added to the bank</p> : <p>{error}</p>}
 
     </div>
